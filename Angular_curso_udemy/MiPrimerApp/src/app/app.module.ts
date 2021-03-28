@@ -6,6 +6,7 @@ import { SaludoComponent } from './saludo/saludo.component';
 import { PadreComponent } from './padre/padre.component';
 import { HijoComponent } from './hijo/hijo.component';
 import { Hijo2Component } from './hijo2/hijo2.component';
+import { EventosComponent } from './eventos/eventos.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { Hijo2Component } from './hijo2/hijo2.component';
     SaludoComponent,
     PadreComponent,
     HijoComponent,
-    Hijo2Component
+    Hijo2Component,
+    EventosComponent
   ],
   imports: [
     BrowserModule
