@@ -6,15 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calculadora.component.css'],
 })
 export class CalculadoraComponent implements OnInit {
-  resultado: number;
+  result: string;
 
   constructor() {
-    this.resultado = 0;
+    this.result = '';
   }
 
   ngOnInit(): void {}
 
-  onClick() {
-    console.log('Hola mundo');
+  onClick($event) {
+    this.result += $event.target.innerText;
+  }
+
+  onResultado() {
+    this.result = eval(this.result);
   }
 }
