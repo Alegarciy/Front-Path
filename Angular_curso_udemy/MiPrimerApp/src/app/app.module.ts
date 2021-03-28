@@ -7,6 +7,7 @@ import { PadreComponent } from './padre/padre.component';
 import { HijoComponent } from './hijo/hijo.component';
 import { Hijo2Component } from './hijo2/hijo2.component';
 import { EventosComponent } from './eventos/eventos.component';
+import { Evento2Component } from './evento2/evento2.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { EventosComponent } from './eventos/eventos.component';
     PadreComponent,
     HijoComponent,
     Hijo2Component,
-    EventosComponent
+    EventosComponent,
+    Evento2Component
   ],
   imports: [
     BrowserModule
