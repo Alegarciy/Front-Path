@@ -8,6 +8,7 @@ import { HijoComponent } from './hijo/hijo.component';
 import { Hijo2Component } from './hijo2/hijo2.component';
 import { EventosComponent } from './eventos/eventos.component';
 import { Evento2Component } from './evento2/evento2.component';
+import { AlertaComponent } from './components/alerta/alerta.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { Evento2Component } from './evento2/evento2.component';
     HijoComponent,
     Hijo2Component,
     EventosComponent,
-    Evento2Component
+    Evento2Component,
+    AlertaComponent
   ],
   imports: [
     BrowserModule

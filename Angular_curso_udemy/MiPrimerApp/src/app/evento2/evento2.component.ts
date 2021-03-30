@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-evento2',
@@ -7,17 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Evento2Component implements OnInit {
   tiempo: number;
+  @Input() tiempoInicial: number;
+  @Output() alertaNumeroInicial = new EventEmitter<string>();
 
   constructor() {
-    this.tiempo = 10;
+    this.tiempoInicial = 10;
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.tiempo = this.tiempoInicial;
+  }
 
   onClick(): void {
+    console.log('hola mundo');
     let interval = setInterval(() => {
       this.tiempo--;
-      if (this.tiempo === 0) clearInterval(interval);
+      if (this.tiempo === 0) {
+        this.alertaNumeroInicial.emit(
+          'El timer con valor: ' + this.tiempoInicial + ' a terminado'
+        );
+        this.tiempo = this.tiempoInicial;
+        clearInterval(interval);
+      }
     }, 1000);
   }
 }
